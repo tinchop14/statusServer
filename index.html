@@ -29,7 +29,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index.html">VMs Status</a>
+      <a class="navbar-brand mr-1" href="index.html">UNNOBA Status</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -74,17 +74,14 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Sistemas</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
             <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
+            <a class="dropdown-item" href="http://monitor.unnoba.edu.ar">Monitor</a>
+            <a class="dropdown-item" href="http://webtools.unnoba.edu.ar">Webtools</a>
+            <a class="dropdown-item" href="http://netbox.unnoba.edu.ar">Netbox</a>
+
           </div>
         </li>
       </ul>
@@ -109,8 +106,10 @@
               Estado de máquinas virtuales</div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="border-radius: 10px;overflow: hidden;">
-                  <thead style="border-radius: 10px;background-color: whitesmoke;color: black;overflow: hidden;">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0" style="border-radius: 10px;overflow: hidden;">
+                  <thead style="border-radius: 10px;background-color: whitesmoke;color: #171A1D;overflow: hidden;">
+                    <tr>
+                      <th></th>
                       <th>VM</th>
                       <th>Server</th>
                       <th>CPUs</th>
