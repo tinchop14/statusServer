@@ -1,0 +1,31 @@
+{
+  "data": [
+    {
+      "vm": "dossier",
+      "server": "cersey",
+      "cpus": "2",
+      "ram": "4gb",
+      "discos": "dossier-disk dossier-data",
+      "ventanas": "5-4",
+      "observaciones": "nada"
+    },
+    {
+      "vm": "dossier-test",
+      "server": "Garrett Winters",
+      "cpus": "Accountant",
+      "ram": "$170,750",
+      "discos": "2011/07/25",
+      "ventanas": "Tokyo",
+      "observaciones": "nada"
+    },
+    {
+      "vm": "viaticos",
+      "server": "Ashton Cox",
+      "cpus": "Junior Technical Author",
+      "ram": "$86,000",
+      "discos": "2009/01/12",
+      "ventanas": "San Francisco",
+      "observaciones": "nada"
+    }
+  ]
+}
