@@ -4,19 +4,23 @@ function format ( d ) {
     var i;
     var aux;
     var sum="";
-    for (i = 0; i < Number(d.ndiscos); i++) {
-      aux ='<tr style="background-color:whitesmoke">'+
+    for (i = Number(d.ndiscos); i >= 1; i--) {
+      aux ='<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
-          '<td>'+d.disco+'</td>'+
+          '<td>'+d['disco'+i]+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Tipo:</td>'+
+          '<td>'+d['tipo'+i]+'</td>'+
       '</tr>'+
       '<tr>'+
           '<td>Backup:</td>'+
-          '<td>'+d.backup+'</td>'+
+          '<td>'+d['backup'+i]+'</td>'+
       '</tr>'+
       '<tr>'+
           '<td>Ventana:</td>'+
-          '<td>'+d.ventana+'</td>'+
-      '</tr>';
+          '<td>'+d['ventana'+i]+'</td>'+
+      '</tr>'+'<tr>'+'<td>'+'</td>'+'<td>'+'</td>'+'</tr>';
       sum=aux+sum;
     }
 
