@@ -1,20 +1,31 @@
 
 function format ( d ) {
     // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
-            '<td>Full name:</td>'+
-            '<td>algo</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Extension number:</td>'+
-            '<td>añgp</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Extra info:</td>'+
-            '<td>And any further details here (images etc)...</td>'+
-        '</tr>'+
+    var i;
+    var aux;
+    var sum="";
+    for (i = 0; i < Number(d.ndiscos); i++) {
+      aux ='<tr style="background-color:whitesmoke">'+
+          '<td>Disco:</td>'+
+          '<td>'+d.disco+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Backup:</td>'+
+          '<td>'+d.backup+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Ventana:</td>'+
+          '<td>'+d.ventana+'</td>'+
+      '</tr>';
+      sum=aux+sum;
+    }
+
+    var tabla = '<table class="table-bordered" id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;">'+
+    sum+
     '</table>';
+
+
+    return tabla;
 }
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
@@ -31,8 +42,7 @@ $(document).ready(function() {
            { "data": "server" },
            { "data": "cpus" },
            { "data": "ram" },
-           { "data": "discos" },
-           { "data": "ventanas" },
+           { "data": "ndiscos" },
            { "data": "observaciones" }
          ],
           "order": [[1, 'asc']]
@@ -42,6 +52,7 @@ $(document).ready(function() {
 $('#dataTable tbody').on('click', 'td.details-control', function () {
     var tr = $(this).closest('tr');
     var row = table.row( tr );
+
 
     if ( row.child.isShown() ) {
         // This row is already open - close it

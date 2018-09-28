@@ -373,3 +373,12 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+
+.dataTable{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detailTable{
+  border-radius: 10px;
+}

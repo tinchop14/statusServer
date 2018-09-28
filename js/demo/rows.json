@@ -6,9 +6,11 @@
       "server": "cersey",
       "cpus": "2",
       "ram": "4gb",
-      "discos": "dossier-disk dossier-data",
-      "ventanas": "5-4",
-      "observaciones": "nada"
+      "ndiscos":"2",
+      "disco": "dossier-disk",
+      "backup":"SI",
+      "ventana":"5d",
+      "observaciones":"nada"
     },
     {
       "id":"2",
@@ -16,9 +18,11 @@
       "server": "bferro4",
       "cpus": "2",
       "ram": "3gb",
-      "discos": "dossier-test-disk",
-      "ventanas": "3",
-      "observaciones": "nada"
+      "ndiscos":"3",
+      "disco": "dossier-disk",
+      "backup":"SI",
+      "ventana":"5d",
+      "observaciones":"nada"
     },
     {
       "id":"3",
@@ -26,9 +30,11 @@
       "server": "blade5",
       "cpus": "3",
       "ram": "2gb",
-      "discos": "viaticos-disk",
-      "ventanas": "2",
-      "observaciones": "nada"
+      "ndiscos":"2",
+      "disco": "dossier-disk",
+      "backup":"SI",
+      "ventana":"5d",
+      "observaciones":"nada"
     }
   ]
 }
