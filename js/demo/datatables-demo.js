@@ -20,7 +20,11 @@ function format ( d ) {
       '<tr>'+
           '<td>Ventana:</td>'+
           '<td>'+d['ventana'+i]+'</td>'+
-      '</tr>'+'<tr>'+'<td>'+'</td>'+'<td>'+'</td>'+'</tr>';
+      '</tr>'+
+      '<tr>'+
+          '<td>Observaciones:</td>'+
+          '<td>'+d['observaciones'+i]+'</td>'+
+      '</tr>'+'<tr>'+'</tr>';
       sum=aux+sum;
     }
 
