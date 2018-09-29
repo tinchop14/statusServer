@@ -12,6 +12,7 @@
       "tipo1":"virtfs",
       "backup1":"SI",
       "ventana1":"5d",
+      "observaciones1":"Nada",
       "disco2": "dossier-data",
       "tipo2":"nfs",
       "backup2":"SI",
@@ -19,7 +20,8 @@
       "disco3": "dossier-pdf",
       "tipo3":"VmOnSan",
       "backup3":"SI",
-      "ventana3":"3d"
+      "ventana3":"3d",
+      "observaciones3":"Nada"
     },
     {
       "id":"2",
@@ -31,7 +33,9 @@
       "disco1": "dossier-disk",
       "backup1":"SI",
       "ventana1":"5d",
-      "observaciones":"Nada"
+      "observaciones":"Nada",
+      "observaciones1":"Nada"
+
     },
     {
       "id":"3",
@@ -43,7 +47,8 @@
       "disco1": "dossier-disk",
       "backup1":"SI",
       "ventana1":"5d",
-      "observaciones":"Nada"
+      "observaciones":"Nada",
+      "observaciones1":"Nada"
     },
     {
       "id":"4",
@@ -55,7 +60,8 @@
       "disco1": "dossier-disk",
       "backup1":"SI",
       "ventana1":"5d",
-      "observaciones":"Nada"
+      "observaciones":"Nada",
+      "observaciones1":"Nada"
     },
     {
       "id":"5",
