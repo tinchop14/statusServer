@@ -35,6 +35,18 @@ function format ( d ) {
 $(document).ready(function() {
   var table = $('#dataTable').DataTable({
     "ajax": "js/demo/rows.json",
+    "language": {
+            "lengthMenu": "Mostrando _MENU_ VMs por página",
+            "zeroRecords": "No se encontró la búsqueda",
+            "info": "Página _PAGE_ de _PAGES_",
+            "infoEmpty": "No hay info",
+            "infoFiltered": "(filtrada de _MAX_ registros)",
+            "search": "Buscar:",
+            "paginate": {
+                      "previous": "Anterior",
+                      "next": "Siguiente"
+            }
+        },
        "columns": [
            {
                 "className":      'details-control',

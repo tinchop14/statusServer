@@ -5,6 +5,7 @@ table.dataTable {
   max-width: none !important;
   border-collapse: separate !important;
   border-spacing: 0;
+  font-size:12px;
 }
 table.dataTable td,
 table.dataTable th {
@@ -206,12 +207,12 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 }
 td.details-control {
     background: url('../../img/plus.png') no-repeat center center;
-    background-size: 25px 25px;
+    background-size: 22px 22px;
     cursor: pointer;
     opacity: 0.8;
 }
 tr.shown td.details-control {
     background: url('../../img/plus.png') no-repeat center center;
-    background-size: 25px 25px;
+    background-size: 20px 20px;
     opacity: 0.5;
 }
