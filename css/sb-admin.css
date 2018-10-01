@@ -376,10 +376,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .dataTable{
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.detailTable{
-  border-radius: 10px;
+  !border-radius: 10px;
+  !overflow: hidden;
+  font-size: small;
 }

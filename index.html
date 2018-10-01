@@ -20,8 +20,12 @@
     <!-- Page level plugin CSS-->
     <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
+    <link href="vendor/datatables/responsive.dataTables.min.css" rel="stylesheet">
+
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
+
+
 
   </head>
 
@@ -106,8 +110,8 @@
               Estado de máquinas virtuales</div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead style="border-radius: 10px;background-color: whitesmoke;color: #171A1D;overflow: hidden;">
+                <table class="table table-borderless table-stripped" id="dataTable" width="100%" cellspacing="0">
+                  <thead style="background-color: #343a40;color: #FFFF;overflow: hidden;">
                     <tr>
                       <th></th>
                       <th>VM</th>
@@ -115,6 +119,7 @@
                       <th>CPUs</th>
                       <th>RAM</th>
                       <th>N° Discos</th>
+                      <th>Discos</th>
                       <th>Observaciones</th>
                     </tr>
                   </thead>
@@ -184,6 +189,8 @@
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
+
+    <script src="vendor/datatables/dataTables.responsive.min.js"></script>
 
   </body>
 
