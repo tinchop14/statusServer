@@ -377,10 +377,28 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .dataTable{
-  border-radius: 10px;
-  overflow: hidden;
+  !border-radius: 10px;
+  !overflow: hidden;
+  font-size: small;
 }
 
-.detailTable{
-  border-radius: 10px;
+.dtr-modal-display{
+  animation-name: animatetop;
+animation-duration: 0.4s
+}
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.dtr-modal-header{
+    padding: 20px 16px;
+    background-color: #212529;
+    color: white;
+}
+
+.dtr-modal-close{
+    color: #aaa;
+    font-weight: bold;
 }

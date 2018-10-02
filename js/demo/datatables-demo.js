@@ -5,9 +5,8 @@ function format ( d ) {
     var aux;
     var sum="";
     for (i = Number(d.ndiscos); i >= 1; i--) {
-      aux =
-      '<div class="col-xs-12 col-6">'+
-      '<table class="table-bordered" id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;width: 100%; margin-bottom:12px;">'+
+     aux=  '<div class="col-xs-12 col-6">'+
+      '<table class="table-bordered" responsive=true id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;width: 100%; margin-bottom:12px;">'+
       '<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
@@ -44,20 +43,16 @@ $(document).ready(function() {
   var table = $('#dataTable').DataTable({
     "ajax": "js/demo/rows.json",
     responsive: {
-              details: false
-          },
-    "language": {
-            "lengthMenu": "Mostrando _MENU_ VMs por página",
-            "zeroRecords": "No se encontró la búsqueda",
-            "info": "Página _PAGE_ de _PAGES_",
-            "infoEmpty": "No hay info",
-            "infoFiltered": "(filtrada de _MAX_ registros)",
-            "search": "Buscar:",
-            "paginate": {
-                      "previous": "Anterior",
-                      "next": "Siguiente"
+            details: {
+                display: $.fn.dataTable.Responsive.display.modal( {
+                    header: function ( row ) {
+                        var data = row.data();
+                        return 'Detalles';
+                    }
+                } ),
+                // renderer: $.fn.dataTable.Responsive.renderer.tableAll()
             }
-        },
+    },
        "columns": [
            {
                 "className":      'details-control',
@@ -70,26 +65,48 @@ $(document).ready(function() {
            { "data": "cpus" },
            { "data": "ram" },
            { "data": "ndiscos" },
+           {
+                "className":      'discos-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": 'Ver discos'
+           },
            { "data": "observaciones" }
          ],
           "order": [[1, 'asc']]
    } );
 
 // Add event listener for opening and closing details
-$('#dataTable tbody').on('click', 'td.details-control', function () {
-    var tr = $(this).closest('tr');
-    var row = table.row( tr );
+// $('#dataTable tbody').on('click', 'td.details-control', function () {
+//     var tr = $(this).closest('tr');
+//     var row = table.row( tr );
+//
+//
+//     if ( row.child.isShown() ) {
+//         // This row is already open - close it
+//         row.child.hide();
+//         tr.removeClass('shown');
+//     }
+//     else {
+//         // Open this row
+//         row.child( format(row.data()) ).show();
+//         tr.addClass('shown');
+//     }
+// } );
 
+$('#dataTable tbody').on('click', 'td.discos-control', function () {
+  var tr = $(this).closest('tr');
+  var row = table.row( tr );
 
-    if ( row.child.isShown() ) {
-        // This row is already open - close it
-        row.child.hide();
-        tr.removeClass('shown');
-    }
-    else {
-        // Open this row
-        row.child( format(row.data()) ).show();
-        tr.addClass('shown');
-    }
+  if ( row.child.isShown() ) {
+      // This row is already open - close it
+      row.child.hide();
+      tr.removeClass('shown');
+  }
+  else {
+      // Open this row
+      row.child( format(row.data()) ).show();
+      tr.addClass('shown');
+  }
 } );
-} );
+});

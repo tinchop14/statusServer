@@ -5,7 +5,6 @@ table.dataTable {
   max-width: none !important;
   border-collapse: separate !important;
   border-spacing: 0;
-  font-size:12px;
 }
 table.dataTable td,
 table.dataTable th {
@@ -207,12 +206,22 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:las
 }
 td.details-control {
     background: url('../../img/plus.png') no-repeat center center;
-    background-size: 22px 22px;
-    cursor: pointer;
-    opacity: 0.8;
-}
-tr.shown td.details-control {
-    background: url('../../img/plus.png') no-repeat center center;
     background-size: 20px 20px;
-    opacity: 0.5;
+    cursor: pointer;
+    padding-left: 0px;
+}
+/* tr.shown td.details-control {
+    background: url('../../img/minus.png') no-repeat center center;
+    background-size: 20px 20px;
+} */
+
+td.discos-control{
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 5px;
+
+}
+td.discos-control:hover{
+  background-color: #007bff;
+
 }

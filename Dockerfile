@@ -1,2 +1,3 @@
 FROM nginx
-ADD /home/martin/Descargas/server-status/* /usr/share/nginx/html/
+LABEL Name=statusserver Version=5.0.2
+ADD . /usr/share/nginx/html/
