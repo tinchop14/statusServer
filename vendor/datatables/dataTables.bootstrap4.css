@@ -204,13 +204,13 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:fir
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
   padding-right: 0;
 }
-/* td.details-control {
-    !background: url('../../img/plus.png') no-repeat center center;
+td.details-control {
+    background: url('../../img/plus.png') no-repeat center center;
     background-size: 20px 20px;
     cursor: pointer;
-    opacity: 0.8;
+    padding-left: 0px;
 }
-tr.shown td.details-control {
+/* tr.shown td.details-control {
     background: url('../../img/minus.png') no-repeat center center;
     background-size: 20px 20px;
 } */

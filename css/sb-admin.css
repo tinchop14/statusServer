@@ -12,6 +12,7 @@ html {
 body {
   height: 100%;
   font-family: Ubuntu;
+  font-size: 12px;
 }
 
 #wrapper {
@@ -135,6 +136,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   width: 90px !important;
   background-color: #212529;
   min-height: calc(100vh - 56px);
+  transition: 0.35s;
 }
 
 .sidebar .nav-item:last-child {
@@ -209,6 +211,13 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
     overflow: visible;
     width: 90px !important;
   }
+
+  /* Add Animation */
+  @keyframes animateside {
+      from {left: 0px; opacity: 0}
+      to {top: 300px; opacity: 1}
+  }
+
   .sidebar.toggled .nav-item:last-child {
     margin-bottom: 1rem;
   }
@@ -220,6 +229,8 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
   .sidebar.toggled .nav-item .nav-link span {
     font-size: 0.65rem;
     display: block;
+    transition: 0.35s;
+
   }
   .sidebar.toggled .nav-item .dropdown-menu {
     position: absolute !important;
@@ -379,4 +390,29 @@ body.sidebar-toggled footer.sticky-footer {
   !border-radius: 10px;
   !overflow: hidden;
   font-size: small;
+}
+
+.dtr-modal-display{
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.dtr-modal-header{
+    padding: 20px 16px;
+    background-color: #212529;
+    color: white;
+}
+
+.dtr-modal-content{
+    font-size: medium;
+}
+
+.dtr-modal-close{
+    color: #aaa;
+    font-weight: bold;
 }

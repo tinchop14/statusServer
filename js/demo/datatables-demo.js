@@ -5,7 +5,9 @@ function format ( d ) {
     var aux;
     var sum="";
     for (i = Number(d.ndiscos); i >= 1; i--) {
-      aux ='<tr style="background-color:whitesmoke;">'+
+     aux=  '<div class="col-xs-12 col-6">'+
+      '<table class=" table-bordered" responsive=true id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;width: 100%; margin-bottom:12px;">'+
+      '<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
       '</tr>'+
@@ -20,13 +22,18 @@ function format ( d ) {
       '<tr>'+
           '<td>Ventana:</td>'+
           '<td>'+d['ventana'+i]+'</td>'+
-      '</tr>'+'<tr>'+'</tr>';
+      '</tr>'+
+      '<tr>'+
+          '<td>Observaciones:</td>'+
+          '<td>'+d['observaciones'+i]+'</td>'+
+      '</tr>'+'<tr>'+'</tr>'+
+      '</table> </div>';
       sum=aux+sum;
     }
 
-    var tabla = '<table class="table-bordered" id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;">'+
+    var tabla = '<div class="row">'+
     sum+
-    '</table>';
+    '</div>';
 
 
     return tabla;
@@ -43,10 +50,22 @@ $(document).ready(function() {
                         return 'Detalles';
                     }
                 } ),
-                renderer: $.fn.dataTable.Responsive.renderer.tableAll()
+                renderer: $.fn.dataTable.Responsive.renderer.listHidden()
             }
     },
-       "columns": [
+    "language": {
+          "lengthMenu": "Mostrar _MENU_ VMs por página",
+          "zeroRecords": "No se encontró la búsqueda",
+          "info": "Mostrando _PAGE_ de _PAGES_ páginas",
+          "infoEmpty": "No records available",
+          "infoFiltered": "(filtrado de _MAX_ registros)",
+          "search": "Buscar:",
+          "paginate": {
+              "previous": "Anterior",
+              "next":"Siguiente"
+            }
+       },
+    "columns": [
            {
                 "className":      'details-control',
                 "orderable":      false,

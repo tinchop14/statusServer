@@ -68,7 +68,7 @@
     <div id="wrapper">
 
       <!-- Sidebar -->
-      <ul class="sidebar navbar-nav">
+      <ul class="sidebar toggled navbar-nav">
         <li class="nav-item active">
           <a class="nav-link" href="index.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -110,23 +110,23 @@
               Estado de máquinas virtuales</div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-borderless table-stripped" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-borderless nowrap" id="dataTable" width="100%" cellspacing="0">
                   <thead style="background-color: #343a40;color: #FFFF;overflow: hidden;">
                     <tr>
-                      <th></th>
-                      <th>VM</th>
+                      <th class="control"></th>
+                      <th class="all">VM</th>
                       <th>Server</th>
                       <th>CPUs</th>
                       <th>RAM</th>
                       <th>N° Discos</th>
-                      <th>Discos</th>
+                      <th class="all">Discos</th>
                       <th>Observaciones</th>
                     </tr>
                   </thead>
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted">Actualizado ayer a las 11:59 PM</div>
           </div>
 
         </div>
@@ -136,7 +136,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>UNNOBA 2018</span>
             </div>
           </div>
         </footer>
@@ -171,6 +171,8 @@
       </div>
     </div>
 
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -179,7 +181,6 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/datatables/jquery.dataTables.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
@@ -188,7 +189,6 @@
 
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
 
     <script src="vendor/datatables/dataTables.responsive.min.js"></script>
 
