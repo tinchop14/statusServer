@@ -7,7 +7,7 @@
       "cpus": "2",
       "ram": "4gb",
       "ndiscos":"3",
-      "observaciones":"The open infrastructure landscape is changing, and so is the Summit. Now that users are integrating dozens of open source tools into a modern stack that reaches well beyond the scope of OpenStack, we re-organized the event to focus on specific problem domains. ",
+      "observaciones":"The open infrastructure landscape is changing, and so is ",
       "disco1": "dossier-disk",
       "tipo1":"virtfs",
       "backup1":"SI",

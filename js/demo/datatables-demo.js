@@ -5,8 +5,8 @@ function format ( d ) {
     var aux;
     var sum="";
     for (i = Number(d.ndiscos); i >= 1; i--) {
-     aux=  '<div class="col-xs-12 col-6">'+
-      '<table class=" table-bordered" responsive=true id=detailTable cellpadding="0" cellspacing="0" border="0" style="padding-left:0px;border-radius: 10px;width: 100%; margin-bottom:12px;">'+
+     aux=  '<div class="col-xs-12 col-6 ">'+
+      '<table class=" table-bordered" responsive=true id=detailTable cellpadding="0" border="0" style="border-radius: 10px;width: 100%; margin-bottom:12px;">'+
       '<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
@@ -31,7 +31,7 @@ function format ( d ) {
       sum=aux+sum;
     }
 
-    var tabla = '<div class="row">'+
+    var tabla = '<div class="row" styles=margin-right:20px>'+
     sum+
     '</div>';
 
