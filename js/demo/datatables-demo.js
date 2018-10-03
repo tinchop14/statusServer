@@ -9,7 +9,7 @@ function format ( d ) {
     if (i==Number(d.ndiscos)){
       aux=  '<div class="row">'+
        '<div class="col-sm-6" style="margin-bottom:20px;">'+
-       '<table class=" table-bordered responsive=true" style="width:100%">'+
+       '<table class="table-bordered" style="width:100%">'+
        '<tr style="background-color:whitesmoke;">'+
            '<td>Disco:</td>'+
            '<td>'+d['disco'+i]+'</td>'+
@@ -28,14 +28,14 @@ function format ( d ) {
        '</tr>'+
        '<tr>'+
            '<td>Observaciones:</td>'+
-           '<td>'+d['observaciones'+i]+'</td>'+
+           '<td style=" white-space: normal;">'+d['observaciones'+i]+'</td>'+
        '</tr>'+'<tr>'+'</tr>'+
        '</table> </div></div>';
     }
     else{
      aux=  '<div class="row">'+
       '<div class="col-sm-6" style="margin-bottom:20px;">'+
-      '<table class=" table-bordered responsive=true" style="width:100%">'+
+      '<table class="table-bordered" responsive=true style="width:100%;">'+
       '<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
@@ -54,7 +54,7 @@ function format ( d ) {
       '</tr>'+
       '<tr>'+
           '<td>Observaciones:</td>'+
-          '<td>'+d['observaciones'+i]+'</td>'+
+          '<td style=" white-space: normal;">'+d['observaciones'+i]+'</td>'+
       '</tr>'+'<tr>'+'</tr>'+
       '</table> </div>'+
       '<div class="col-sm-6" style="margin-bottom:20px;">'+
@@ -77,7 +77,7 @@ function format ( d ) {
       '</tr>'+
       '<tr>'+
           '<td>Observaciones:</td>'+
-          '<td>'+d['observaciones'+(i+1)]+'</td>'+
+          '<td style=" white-space: normal;">'+d['observaciones'+(i+1)]+'</td>'+
       '</tr>'+'<tr>'+'</tr>'+
       '</table> </div> </div>';
     }
