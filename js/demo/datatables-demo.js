@@ -37,7 +37,7 @@ function format ( d ) {
       '<div class="col-sm-6" style="margin-bottom:20px;">'+
       '<table class="table-bordered" responsive=true style="width:100%;">'+
       '<tr style="background-color:whitesmoke;">'+
-          '<td>Disco:</td>'+
+          '<td >Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
       '</tr>'+
       '<tr>'+
