@@ -416,3 +416,7 @@ body.sidebar-toggled footer.sticky-footer {
     color: #aaa;
     font-weight: bold;
 }
+
+.detailTable{
+  width: 100%;
+}

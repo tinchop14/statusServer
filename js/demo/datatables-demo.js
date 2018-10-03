@@ -4,9 +4,38 @@ function format ( d ) {
     var i;
     var aux;
     var sum="";
-    for (i = Number(d.ndiscos); i >= 1; i--) {
-     aux=  '<div class="col-xs-12 col-6 ">'+
-      '<table class=" table-bordered" responsive=true id=detailTable cellpadding="0" border="0" style="border-radius: 10px;width: 100%; margin-bottom:12px;">'+
+    for (i = 1; i <= Number(d.ndiscos); i += 2) {
+
+    if (i==Number(d.ndiscos)){
+      aux=  '<div class="row">'+
+       '<div class="col-sm-6" style="margin-bottom:20px;">'+
+       '<table class=" table-bordered responsive=true" style="width:100%">'+
+       '<tr style="background-color:whitesmoke;">'+
+           '<td>Disco:</td>'+
+           '<td>'+d['disco'+i]+'</td>'+
+       '</tr>'+
+       '<tr>'+
+           '<td>Tipo:</td>'+
+           '<td>'+d['tipo'+i]+'</td>'+
+       '</tr>'+
+       '<tr>'+
+           '<td>Backup:</td>'+
+           '<td>'+d['backup'+i]+'</td>'+
+       '</tr>'+
+       '<tr>'+
+           '<td>Ventana:</td>'+
+           '<td>'+d['ventana'+i]+'</td>'+
+       '</tr>'+
+       '<tr>'+
+           '<td>Observaciones:</td>'+
+           '<td>'+d['observaciones'+i]+'</td>'+
+       '</tr>'+'<tr>'+'</tr>'+
+       '</table> </div></div>';
+    }
+    else{
+     aux=  '<div class="row">'+
+      '<div class="col-sm-6" style="margin-bottom:20px;">'+
+      '<table class=" table-bordered responsive=true" style="width:100%">'+
       '<tr style="background-color:whitesmoke;">'+
           '<td>Disco:</td>'+
           '<td>'+d['disco'+i]+'</td>'+
@@ -27,11 +56,35 @@ function format ( d ) {
           '<td>Observaciones:</td>'+
           '<td>'+d['observaciones'+i]+'</td>'+
       '</tr>'+'<tr>'+'</tr>'+
-      '</table> </div>';
-      sum=aux+sum;
+      '</table> </div>'+
+      '<div class="col-sm-6" style="margin-bottom:20px;">'+
+      '<table class=" table-bordered responsive=true" style="width:100%;">'+
+      '<tr style="background-color:whitesmoke;">'+
+          '<td>Disco:</td>'+
+          '<td>'+d['disco'+(i+1)]+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Tipo:</td>'+
+          '<td>'+d['tipo'+(i+1)]+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Backup:</td>'+
+          '<td>'+d['backup'+(i+1)]+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Ventana:</td>'+
+          '<td>'+d['ventana'+(i+1)]+'</td>'+
+      '</tr>'+
+      '<tr>'+
+          '<td>Observaciones:</td>'+
+          '<td>'+d['observaciones'+(i+1)]+'</td>'+
+      '</tr>'+'<tr>'+'</tr>'+
+      '</table> </div> </div>';
+    }
+      sum=sum+aux;
     }
 
-    var tabla = '<div class="row" styles=margin-right:20px>'+
+    var tabla = '<div class="container">'+
     sum+
     '</div>';
 
