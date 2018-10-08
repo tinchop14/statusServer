@@ -136,10 +136,16 @@ $(document).ready(function() {
                 "data":           null,
                 "defaultContent": 'Ver discos'
            },
-           { "data": "observaciones" }
+           { "data": "observaciones",
+           render : function(data, type, row) {
+             return '<span class="tooltiptext">'+data+'</span>'+ data
+           },
+             "className": "obs-style"
+           }
          ],
           "order": [[1, 'asc']]
    } );
+
 
 // Add event listener for opening and closing details
 // $('#dataTable tbody').on('click', 'td.details-control', function () {
