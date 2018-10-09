@@ -435,7 +435,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .dtr-modal-content{
-    font-size: medium;
+    font-size: small;
 }
 
 .dtr-modal-close{
@@ -488,4 +488,5 @@ body.sidebar-toggled footer.sticky-footer {
 .obs-style:hover .tooltiptext {
     visibility: visible;
     opacity: 0.8;
+
 }

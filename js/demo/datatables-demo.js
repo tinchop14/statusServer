@@ -138,7 +138,7 @@ $(document).ready(function() {
            },
            { "data": "observaciones",
            render : function(data, type, row) {
-             return '<span class="tooltiptext">'+data+'</span>'+ data
+             return '<span class="tooltiptext d-none d-lg-block">'+data+'</span>'+data
            },
              "className": "obs-style"
            }

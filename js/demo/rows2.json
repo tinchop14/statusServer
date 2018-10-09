@@ -1,0 +1,52 @@
+{
+  "data": [
+    {
+      "id":"1",
+      "vm": "dossier",
+      "server": "cersey",
+      "cpus": "2",
+      "ram": "4gb",
+      "ndiscos":"3",
+      "observaciones":"Observación de la máquina virtual",
+      "disco1": "dossier-disk",
+      "tipo1":"virtfs",
+      "backup1":"SI",
+      "ventana1":"5d",
+      "observaciones1":"Observación del disco 1",
+      "disco2": "dossier-data",
+      "tipo2":"nfs",
+      "backup2":"SI",
+      "ventana2":"3d",
+      "observaciones2":"Observación del disco 2",
+      "disco3": "dossier-pdf",
+      "tipo3":"VmOnSan",
+      "backup3":"SI",
+      "ventana3":"3d",
+      "observaciones3":"Observación del disco 3"
+    },
+    {
+      "id":"2",
+      "vm": "dossier-test",
+      "server": "bferro3",
+      "cpus": "2",
+      "ram": "4gb",
+      "ndiscos":"3",
+      "observaciones":"Observación de la máquina virtual",
+      "disco1": "dossier-disk",
+      "tipo1":"virtfs",
+      "backup1":"SI",
+      "ventana1":"5d",
+      "observaciones1":"Observación del disco 1",
+      "disco2": "dossier-data",
+      "tipo2":"nfs",
+      "backup2":"SI",
+      "ventana2":"3d",
+      "observaciones2":"Observación del disco 2",
+      "disco3": "dossier-pdf",
+      "tipo3":"VmOnSan",
+      "backup3":"SI",
+      "ventana3":"3d",
+      "observaciones3":"Observación del disco 3"
+    }
+  ]
+}
