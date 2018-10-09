@@ -49,6 +49,25 @@
           <div class="text-center">
               <a class="d-block small mt-3" href="forgot-password.html">Olvide la Contraseña</a>
           </div>
+
+          <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Datos incorrectos!</h5>
+                  <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div class="modal-body">Email o contraseña incorrectos</div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" id="botonCancelar" type="button" data-dismiss="modal">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -88,13 +107,24 @@
         login();
       }
     });
-    var input = document.getElementById("inputPassword");
+    input = document.getElementById("inputPassword");
     input.addEventListener("keyup", function(event) {
       // Cancel the default action, if needed
       event.preventDefault();
       // Number 13 is the "Enter" key on the keyboard
       if (event.keyCode === 13) {
         login();
+      }
+    });
+
+    input = document.getElementById('errorModal');
+    var boton = document.getElementById('botonCancelar')
+    input.addEventListener("keyup", function(event) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        boton.click();
       }
     });
 
@@ -109,8 +139,8 @@
         var errorCode = error.code;
         var errorMessage = error.message;
 
-        if (errorCode === 'auth/wrong-password') {
-          alert('Wrong password.');
+        if (errorCode) {
+           $("#errorModal").modal();
         } else {
           alert(errorMessage);
         }

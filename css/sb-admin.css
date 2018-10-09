@@ -11,7 +11,7 @@ html {
 
 body {
   height: 100%;
-  font-family: Ubuntu;
+  font-family: 'Ubuntu',sans-serif;
   font-size: 12px;
 }
 
@@ -89,7 +89,10 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 
 .navbar-nav .form-inline .input-group {
   width: 100%;
+  vertical-align: 0;
+
 }
+
 
 .navbar-nav .nav-item.active .nav-link {
   color: #fff;
@@ -363,6 +366,7 @@ footer.sticky-footer {
   width: calc(100% - 225px);
   height: 80px;
   background-color: #e9ecef;
+  transition: 0.35s;
 }
 
 footer.sticky-footer .copyright {
@@ -453,7 +457,7 @@ body.sidebar-toggled footer.sticky-footer {
 
 .obs-style .tooltiptext {
     visibility: hidden;
-    width: 350px;
+    width: 300px;
     background-color: #007bff;
     color: #fff;
     text-align: center;
