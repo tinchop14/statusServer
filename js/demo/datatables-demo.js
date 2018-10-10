@@ -134,7 +134,7 @@ $(document).ready(function() {
                 "className":      'discos-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": 'Ver discos'
+                "defaultContent": 'Ver discos  '+ '<i class="fa fa-search-plus" aria-hidden="true"></i>'
            },
            { "data": "observaciones",
            render : function(data, type, row) {

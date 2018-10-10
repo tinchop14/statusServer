@@ -220,8 +220,11 @@ td.discos-control{
     cursor: pointer;
     margin: 5px;
 
+
 }
 td.discos-control:hover{
   background-color: #007bff;
+  border-radius: .25rem;
+  color:white;
 
 }

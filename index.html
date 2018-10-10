@@ -166,12 +166,6 @@
       </div>
     </div>
 
-    <!-- Firebase App is always required and must be first -->
-    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
-
-    <!-- Add additional services that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
-
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -190,37 +184,6 @@
     <script src="js/demo/datatables-demo.js"></script>
 
     <script src="vendor/datatables/dataTables.responsive.min.js"></script>
-
-    <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyBeaU8CQSDFjba710jczWY0ssPnCsatQ5E",
-      authDomain: "unnoba-c3783.firebaseapp.com",
-      databaseURL: "https://unnoba-c3783.firebaseio.com",
-      projectId: "unnoba-c3783",
-      storageBucket: "unnoba-c3783.appspot.com",
-      messagingSenderId: "545449212409"
-    };
-    firebase.initializeApp(config);
-
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        // User is signed in.
-        document.getElementById("showUser").innerHTML = user.email;
-      } else {
-        window.location.replace("login.html");
-      }
-    });
-    function logout(){
-      firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-        window.location.replace("login.html");
-      }, function(error) {
-        // An error happened.
-        console.log(error);
-      });
-    }
-    </script>
 
 
   </body>
