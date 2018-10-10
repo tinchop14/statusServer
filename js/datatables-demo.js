@@ -94,7 +94,7 @@ function format ( d ) {
 // Call the dataTables jQuery plugin
 $(document).ready(function() {
   var table = $('#dataTable').DataTable({
-    "ajax": "js/demo/rows.json",
+    "ajax": "js/rows.json",
     responsive: {
             details: {
                 display: $.fn.dataTable.Responsive.display.modal( {
