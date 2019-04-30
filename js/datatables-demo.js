@@ -84,7 +84,7 @@ function format ( d ) {
       sum=sum+aux;
     }
 
-    var tabla = '<div class="container">'+
+    var tabla = '<div class="slider container">'+
     sum+
     '</div>';
 
@@ -171,12 +171,13 @@ $('#dataTable tbody').on('click', 'td.discos-control', function () {
 
   if ( row.child.isShown() ) {
       // This row is already open - close it
+
       row.child.hide();
       tr.removeClass('shown');
   }
   else {
       // Open this row
-      row.child( format(row.data()) ).show();
+      row.child( format(row.data())).show();
       tr.addClass('shown');
   }
 } );
